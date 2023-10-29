@@ -13,3 +13,4 @@ CoLaboratory
 開啟CoLaboratory，會出現一個「Hello, Colaboratory」文件，包含一些基本範例。建議嘗試一下。
 
 使用CoLaboratory 可以在Jupyter Notebook 上寫程式碼。寫好後執行(Shift + Enter)，程式碼單元下方就會產生輸出。
+![image](https://github.com/ytgh09050/Google-Colab/assets/111853085/97050690-df11-4a79-b6b7-bd4ea27e83c1)
