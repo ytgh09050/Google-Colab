@@ -1,31 +1,31 @@
 # Google-Colab
 完全雲端運行：使用Google-CoLaboratory訓練神經網路
 Colaboratory 是一個Google 研究項目，旨在幫助傳播機器學習培訓和研究成果。它是一個Jupyter 筆記本環境，不需要進行任何設定就可以使用，並且完全在雲端運行。Colaboratory 筆記本儲存在Google 雲端硬碟(https://drive.google.com/) 中，並且可以分享，就如同您使用Google 文件或表格一樣。Colaboratory 可免費使用。本文介紹如何使用Google CoLaboratory 訓練神經網路。
-工具連結：https://colab.research.google.com/
+工具連結： https://colab.research.google.com/
 
 谷歌近期上線了協作寫程式碼的內部工具Google CoLaboratory。Colaboratory 是一個Google 研究項目，旨在幫助傳播機器學習培訓和研究成果。它是一個Jupyter 筆記本環境，不需要進行任何設定就可以使用，並且完全在雲端運行。
 
-Colaboratory 筆記本儲存在Google 雲端硬碟(https://drive.google.com/) 中，並且可以分享，就如同您使用Google 文件或表格一樣。Colaboratory 可免費使用。
+Colaboratory 筆記本儲存在Google 雲端硬碟( https://drive.google.com/ ) 中，並且可以分享，就如同您使用Google 文件或表格一樣。Colaboratory 可免費使用。
 
 # CoLaboratory
 
-首先，請造訪CoLaboratory 網站（http://g.co/colab） ，註冊後接受使用該工具的邀請。確認郵件通常需要一天才能回到你的郵箱。CoLaboratory 允許使用Google虛擬機器執行機器學習任務和建立模型，無需擔心計算力的問題，而且它是免費的。
+首先，請造訪CoLaboratory 網站（ http://g.co/colab ） ，註冊後接受使用該工具的邀請。確認郵件通常需要一天才能回到你的郵箱。CoLaboratory 允許使用Google虛擬機器執行機器學習任務和建立模型，無需擔心計算力的問題，而且它是免費的。
 
 開啟CoLaboratory，會出現一個「Hello, Colaboratory」文件，包含一些基本範例。建議嘗試一下。
 
 使用CoLaboratory 可以在Jupyter Notebook 上寫程式碼。寫好後執行(Shift + Enter)，程式碼單元下方就會產生輸出。
-![image](https://github.com/ytgh09050/Google-Colab/assets/111853085/97050690-df11-4a79-b6b7-bd4ea27e83c1)
+![image]( https://github.com/ytgh09050/Google-Colab/assets/111853085/97050690-df11-4a79-b6b7-bd4ea27e83c1 )
 除了寫程式碼，CoLaboratory 還有一些技巧（trick）。你可以在notebook 中shell 指令前加上「!」。如：!pip install -q keras。這樣你就可以很大程度上控制正在使用的Google虛擬機器。點擊左上方（選單列下）的黑色按鈕就可以找到它們的程式碼片段。
 
-本文旨在展示如何使用CoLaboratory 訓練神經網路。我們將展示一個在威斯康辛乳癌資料集上訓練神經網路的範例，資料集可在UCI Machine Learning Repository（http://archive.ics.uci.edu/ml/datasets）取得。本文的範例相對比較簡單。
+本文旨在展示如何使用CoLaboratory 訓練神經網路。我們將展示一個在威斯康辛乳癌資料集上訓練神經網路的範例，資料集可在UCI Machine Learning Repository（ http://archive.ics.uci.edu/ml/datasets ）取得。本文的範例相對比較簡單。
 
-本文所使用的CoLaboratory notebook 連結：https://colab.research.google.com/notebook#fileId=1aQGl_sH4TVehK8PDBRspwI4pD16xIR0r
+本文所使用的CoLaboratory notebook 連結： https://colab.research.google.com/notebook#fileId=1aQGl_sH4TVehK8PDBRspwI4pD16xIR0r
 
 # 深度學習
 
 深度學習是一種機器學習技術，它所使用的計算技術一定程度上模仿了生物神經元的運作。各層中的神經元網路不斷將資訊從輸入傳輸到輸出，直到其權重調整到可以產生反映特徵和目標之間底層關係的演算法。
 
-想更了解神經網絡，推薦閱讀這篇論文《Artificial Neural Networks for Beginners》（https://arxiv.org/pdf/cs/0308031.pdf）。
+想更了解神經網絡，推薦閱讀這篇論文《Artificial Neural Networks for Beginners》（ https://arxiv.org/pdf/cs/0308031.pdf ）。
 
 # Keras
 
@@ -35,7 +35,7 @@ Colaboratory 筆記本儲存在Google 雲端硬碟(https://drive.google.com/) �
 
 你也可以使用!pip install tensorflow==1.2，安裝特定版本的TensorFlow。
 
-另外，如果你更喜歡用Theano 後端，可以閱讀該文件：https://keras.io/backend/。
+另外，如果你更喜歡用Theano 後端，可以閱讀該文件： https://keras.io/backend/ 。
 
 # 安裝Keras：
 
@@ -63,7 +63,7 @@ classifier = Sequential()
 
 現在，我們要來設計網路。
 
-對於每個隱藏層，我們需要定義三個基本參數：units、kernel_initializer 和activation。units 參數定義每層包含的神經元數量。Kernel_initializer 定義神經元在輸入資料上執行時的初始權重（詳見https://faroit.github.io/keras-docs/1.2.2/initializations/）。activation 定義資料的激活函數。
+對於每個隱藏層，我們需要定義三個基本參數：units、kernel_initializer 和activation。units 參數定義每層包含的神經元數量。Kernel_initializer 定義神經元在輸入資料上執行時的初始權重（詳見 https://faroit.github.io/keras-docs/1.2.2/initializations/ ）。activation 定義資料的激活函數。
 
 注意：如果現在這些項非常大也沒事，很快就會變得更加清晰。
 
@@ -109,7 +109,7 @@ classifier.fit(X_train, y_train, batch_size = 10, epochs = 100)
 
 這裡batch_size 是你希望同時處理的輸入量。epoch 指數據通過神經網路一次的整個週期。它們在Colaboratory Notebook 中顯示如下：
 
-![image](https://github.com/ytgh09050/Google-Colab/assets/111853085/8436f4bb-3a57-442e-b689-fef68d492a89)
+![image]( https://github.com/ytgh09050/Google-Colab/assets/111853085/8436f4bb-3a57-442e-b689-fef68d492a89 )
 
 進行預測，建構混淆矩陣。
 
