@@ -26,7 +26,7 @@ CoLaboratory
 想更了解神經網絡，推薦閱讀這篇論文《Artificial Neural Networks for Beginners》（https://arxiv.org/pdf/cs/0308031.pdf）。
 
 Keras
-Keras 是一種建構人工神經網路的高階API。它使用TensorFlow 或Theano 後端執行內部運作。要安裝Keras，必須先安裝TensorFlow。CoLaboratory 已經在虛擬機器上安裝了TensorFlow。使用以下指令可以檢查是否安裝TensorFlow：
+是一種建構人工神經網路的高階API。它使用TensorFlow 或Theano 後端執行內部運作。要安裝Keras，必須先安裝TensorFlow。CoLaboratory 已經在虛擬機器上安裝了TensorFlow。使用以下指令可以檢查是否安裝TensorFlow：
 
 !pip show tensorflow
 
@@ -35,6 +35,7 @@ Keras 是一種建構人工神經網路的高階API。它使用TensorFlow 或The
 另外，如果你更喜歡用Theano 後端，可以閱讀該文件：https://keras.io/backend/。
 
 混淆矩陣
+
 混淆矩陣是模型做出的正確、錯誤預測的矩陣表徵。此矩陣可供個人調查哪些預測和另一種預測混淆。這是一個2×2 的混淆矩陣。
 ![image](https://github.com/ytgh09050/Google-Colab/assets/111853085/a0412fc7-53c2-40bb-84d5-94253a76c207)
 
