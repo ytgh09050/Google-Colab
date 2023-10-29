@@ -37,6 +37,88 @@ Keras
 
 另外，如果你更喜歡用Theano 後端，可以閱讀該文件：https://keras.io/backend/。
 
+安裝Keras：
+
+!pip install -q keras
+
+# Importing the Keras libraries and packages
+
+import keras
+
+from keras.models import Sequential
+
+from keras.layers import Dense
+
+使用Sequential 和Dense 類別指定神經網路的節點、連接和規格。如上所示，我們將使用這些自訂網路的參數並進行調整。
+
+為了初始化神經網絡，我們將建立一個Sequential 類別的物件。
+
+# Initialising the ANN
+
+classifier = Sequential()
+
+現在，我們要來設計網路。
+
+對於每個隱藏層，我們需要定義三個基本參數：units、kernel_initializer 和activation。units 參數定義每層包含的神經元數量。Kernel_initializer 定義神經元在輸入資料上執行時的初始權重（詳見https://faroit.github.io/keras-docs/1.2.2/initializations/）。activation 定義資料的激活函數。
+
+注意：如果現在這些項非常大也沒事，很快就會變得更加清晰。
+
+第一層：
+
+16 個具備統一初始權重的神經元，活化函數為ReLU。此外，定義參數input_dim = 30 作為輸入層的規格。注意我們的資料集中有30 個特徵列。
+
+Cheat：
+
+我們如何決定這一層的單元數？人們往往會說這需要經驗和專業知識。對於初學者來說，一個簡單方式是：x 和y 的總和除以2。如(30+1)/2 = 15.5 ~ 16，因此，units = 16。
+
+第二層：第二層和第一層一樣，不過第二層沒有input_dim 參數。
+
+輸出層：由於我們的輸出是0 或1，因此我們可以使用具備統一初始權重的單一單元。但是，這裡我們使用sigmoid 來活化函數。
+
+# Adding the input layer and the first hidden layer
+
+classifier.add(Dense(units = 16, kernel_initializer = 'uniform', activation = 'relu', input_dim = 30))
+
+# Adding the second hidden layer
+
+classifier.add(Dense(units = 16, kernel_initializer = 'uniform', activation = 'relu'))
+
+# Adding the output layer
+
+classifier.add(Dense(units = 1, kernel_initializer = 'uniform', activation = 'sigmoid'))
+
+# Compiling the ANN
+
+classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
+
+擬合：
+
+運行人工神經網絡，發生反向傳播。你將在CoLaboratory 上看到所有處理過程，而不是在自己的電腦上。
+
+# Fitting the ANN to the Training set
+
+classifier.fit(X_train, y_train, batch_size = 10, epochs = 100)
+
+這裡batch_size 是你希望同時處理的輸入量。epoch 指數據通過神經網路一次的整個週期。它們在Colaboratory Notebook 中顯示如下：
+
+![image](https://github.com/ytgh09050/Google-Colab/assets/111853085/8436f4bb-3a57-442e-b689-fef68d492a89)
+
+進行預測，建構混淆矩陣。
+
+# Predicting the Test set results
+
+y_pred = classifier.predict(X_test)
+
+y_pred = (y_pred > 0.5)
+
+# Making the Confusion Matrix
+
+from sklearn.metrics import confusion_matrix
+
+cm = confusion_matrix(y_test, y_pred) 
+
+訓練網路後，就可以在X_test set 上進行預測，以檢查模型在新資料上的效能。在程式碼單元中輸入和執行cm 查看結果。
+
 混淆矩陣
 
 混淆矩陣是模型做出的正確、錯誤預測的矩陣表徵。此矩陣可供個人調查哪些預測和另一種預測混淆。這是一個2×2 的混淆矩陣。
