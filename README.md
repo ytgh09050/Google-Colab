@@ -9,7 +9,7 @@ Colaboratory 筆記本儲存在Google 雲端硬碟(https://drive.google.com/) �
 
 # CoLaboratory
 
-首先，請造訪CoLaboratory 網站（http://g.co/colab），註冊後接受使用該工具的邀請。確認郵件通常需要一天才能回到你的郵箱。CoLaboratory 允許使用Google虛擬機器執行機器學習任務和建立模型，無需擔心計算力的問題，而且它是免費的。
+首先，請造訪CoLaboratory 網站（http://g.co/colab） ，註冊後接受使用該工具的邀請。確認郵件通常需要一天才能回到你的郵箱。CoLaboratory 允許使用Google虛擬機器執行機器學習任務和建立模型，無需擔心計算力的問題，而且它是免費的。
 
 開啟CoLaboratory，會出現一個「Hello, Colaboratory」文件，包含一些基本範例。建議嘗試一下。
 
